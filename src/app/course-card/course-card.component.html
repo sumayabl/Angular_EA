@@ -1,0 +1,17 @@
+<div class="course-card" *ngIf="course">
+    <div class="course-title">
+
+      <!--Llamada de los datos de BBDD-->
+      {{ courseIndex+1 + ' ' + course.description}}
+    </div>
+    <!--ngIf si el paramentro es undefined, que no se muestre en la web, para evitar errores-->
+    <img width="300" alt="Angular Logo"
+         [src]="course.iconUrl" *ngIf="course.iconUrl">
+  
+    <div class="course-description">
+      {{ course.longDescription }}
+    </div>
+
+    <hr>
+
+  </div>

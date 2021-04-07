@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {COURSES} from '../db-data';
+import {Course} from './model/course';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-client-course';
+  
+  //Variable courses inicializada con los datos de db
+  courses: Course [] = COURSES;
+
 }
